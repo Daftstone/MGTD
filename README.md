@@ -24,6 +24,8 @@ Currently, we support the following methods:
 ```
 conda env create -f environment.yml;
 conda activate Detection;
+mkdir save_models
+download gpt2-medium model from https://huggingface.co/openai-community/gpt2-medium
 ```
 
 ## Train
