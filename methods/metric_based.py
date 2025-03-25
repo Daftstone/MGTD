@@ -144,56 +144,56 @@ def run_threshold_experiment(data, criterion_fn, name, load_path):
     torch.manual_seed(0)
     np.random.seed(0)
 
-    x_train = np.load(
-        "datasets/embedding/x_train_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter))
-    y_train = np.load(
-        "datasets/embedding/y_train_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter))
-    x_test = np.load(
-        "datasets/embedding/x_test_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter))
-    y_test = np.load(
-        "datasets/embedding/y_test_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter))
+    # x_train = np.load(
+    #     "datasets/embedding/x_train_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter))
+    # y_train = np.load(
+    #     "datasets/embedding/y_train_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter))
+    # x_test = np.load(
+    #     "datasets/embedding/x_test_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter))
+    # y_test = np.load(
+    #     "datasets/embedding/y_test_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter))
 
-    # # get train data
-    # train_text = data['train']['text']
-    # train_label = data['train']['label']
-    # if (args.enhance):
-    #     print('enhance!!!!!!!!!!!!!!!!!!!')
-    #     import pickle
-    #     with open(
-    #             'datasets/filter/x_train_%s_%s_%s_%s_%d.pkl' % (
-    #                     args.dataset, args.train_model, args.detectLLM, 'EMV',
-    #                     args.iter),
-    #             'rb') as file:
-    #         train_text = pickle.load(file)
-    # train_criterion = [
-    #     criterion_fn(
-    #         train_text[idx]) for idx in tqdm(
-    #         range(
-    #             len(train_text)),
-    #         desc="Train criterion")]
-    # x_train = np.array(train_criterion)
-    #
-    # y_train = np.array(train_label)
-    #
-    # test_text = data['test']['text']
-    # test_label = data['test']['label']
-    # if (args.enhance):
-    #     import pickle
-    #     with open(
-    #             'datasets/filter/x_test_%s_%s_%s_%s_%d.pkl' % (
-    #                     args.dataset, args.train_model, args.detectLLM, 'EMV',
-    #                     args.iter),
-    #             'rb') as file:
-    #         test_text = pickle.load(file)
-    # test_criterion = [
-    #     criterion_fn(
-    #         test_text[idx]) for idx in tqdm(
-    #         range(
-    #             len(test_text)),
-    #         desc="Test criterion")]
-    # x_test = np.array(test_criterion)
-    #
-    # y_test = np.array(test_label)
+    # get train data
+    train_text = data['train']['text']
+    train_label = data['train']['label']
+    if (args.enhance):
+        print('enhance!!!!!!!!!!!!!!!!!!!')
+        import pickle
+        with open(
+                'datasets/filter/x_train_%s_%s_%s_%s_%d.pkl' % (
+                        args.dataset, args.train_model, args.detectLLM, 'EMV',
+                        args.iter),
+                'rb') as file:
+            train_text = pickle.load(file)
+    train_criterion = [
+        criterion_fn(
+            train_text[idx]) for idx in tqdm(
+            range(
+                len(train_text)),
+            desc="Train criterion")]
+    x_train = np.array(train_criterion)
+
+    y_train = np.array(train_label)
+
+    test_text = data['test']['text']
+    test_label = data['test']['label']
+    if (args.enhance):
+        import pickle
+        with open(
+                'datasets/filter/x_test_%s_%s_%s_%s_%d.pkl' % (
+                        args.dataset, args.train_model, args.detectLLM, 'EMV',
+                        args.iter),
+                'rb') as file:
+            test_text = pickle.load(file)
+    test_criterion = [
+        criterion_fn(
+            test_text[idx]) for idx in tqdm(
+            range(
+                len(test_text)),
+            desc="Test criterion")]
+    x_test = np.array(test_criterion)
+
+    y_test = np.array(test_label)
 
     # np.save("datasets/embedding/x_train_%s_%s_%s_%d.npy" % (args.dataset, args.detectLLM, args.method, args.iter),
     #         x_train)
