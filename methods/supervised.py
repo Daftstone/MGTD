@@ -420,12 +420,12 @@ def eval_data(data, detector, batch_size, DEVICE, pos_bit, tokenizer=None, flag=
 
     train_res = cal_metrics(y_train, y_train_pred, y_train_pred_prob)
     test_res = cal_metrics(y_test, y_test_pred, y_test_pred_prob)
-    acc_train, precision_train, recall_train, f1_train, auc_train = train_res
-    acc_test, precision_test, recall_test, f1_test, auc_test = test_res
+    acc_train, precision_train, tpr_train, f1_train, auc_train = train_res
+    acc_test, precision_test, tpr_test, f1_test, auc_test = test_res
     print(
-        f"acc_train: {acc_train}, precision_train: {precision_train}, recall_train: {recall_train}, f1_train: {f1_train}, auc_train: {auc_train}")
+        f"acc_train: {acc_train}, precision_train: {precision_train}, tpr_train: {tpr_train}, f1_train: {f1_train}, auc_train: {auc_train}")
     print(
-        f"acc_test: {acc_test}, precision_test: {precision_test}, recall_test: {recall_test}, f1_test: {f1_test}, auc_test: {auc_test}")
+        f"acc_test: {acc_test}, precision_test: {precision_test}, tpr_test: {tpr_test}, f1_test: {f1_test}, auc_test: {auc_test}")
 
     return acc_train, precision_train, recall_train, f1_train, auc_train, acc_test, precision_test, recall_test, f1_test, auc_test
 
