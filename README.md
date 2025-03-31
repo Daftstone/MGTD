@@ -24,11 +24,11 @@ Currently, we support the following methods:
 ```
 conda env create -f environment.yml;
 conda activate Detection;
-mkdir save_models
-download gpt2-medium model from https://huggingface.co/openai-community/gpt2-medium, and move it to save_models/
-download chatgpt-detector-roberta model from https://huggingface.co/Hello-SimpleAI/chatgpt-detector-roberta, and move it to save_models/
-download roberta-base-openai-detector model from https://huggingface.co/openai-community/roberta-base-openai-detector, and move it to save_models/
-download AIGC_detector_env2 model from https://huggingface.co/yuchuantian/AIGC_detector_env2, and move it to save_models/
+mkdir save_models;
+download gpt2-medium model from https://huggingface.co/openai-community/gpt2-medium, and move it to save_models/;
+download chatgpt-detector-roberta model from https://huggingface.co/Hello-SimpleAI/chatgpt-detector-roberta, and move it to save_models/;
+download roberta-base-openai-detector model from https://huggingface.co/openai-community/roberta-base-openai-detector, and move it to save_models/;
+download AIGC_detector_env2 model from https://huggingface.co/yuchuantian/AIGC_detector_env2, and move it to save_models/;
 ```
 
 ## Train
