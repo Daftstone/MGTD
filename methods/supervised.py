@@ -427,7 +427,7 @@ def eval_data(data, detector, batch_size, DEVICE, pos_bit, tokenizer=None, flag=
     print(
         f"acc_test: {acc_test}, precision_test: {precision_test}, tpr_test: {tpr_test}, f1_test: {f1_test}, auc_test: {auc_test}")
 
-    return acc_train, precision_train, recall_train, f1_train, auc_train, acc_test, precision_test, recall_test, f1_test, auc_test
+    return acc_train, precision_train, tpr_train, f1_train, auc_train, acc_test, precision_test, tpr_test, f1_test, auc_test
 
 
 def filter(model, tokenizer, x, DEVICE, pos_bit):
