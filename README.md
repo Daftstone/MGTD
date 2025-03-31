@@ -53,6 +53,8 @@ optional arguments:
                         Filter ratio $\tau$.
   --sentence_num SENTENCE_NUM
                         Sentence number per sequence.
+
+Example: python benchmark.py --finetune --method ChatGPT-STK --dataset Essay --detectLLM ChatGPT-turbo --conf_threshold 0.01 --filter_threshold 0.2 --sentence_num 3
 ```
 
 ## Test
