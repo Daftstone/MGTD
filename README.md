@@ -1,6 +1,6 @@
 # Stacked Detection Enhancement Framework
 
-The source code of the paper (Machine-Generated Text Detection Requires Fewer Human-Machine Mixed Texts). The code is built based on [MGTBench](https://github.com/xinleihe/MGTBench).
+The source code of the paper (Hidden Human-Like Nature of Machine-Generated Texts: Theory and Detection Enhancement). The code is built based on [MGTBench](https://github.com/xinleihe/MGTBench).
 
 ## Supported Methods
 Currently, we support the following methods:
